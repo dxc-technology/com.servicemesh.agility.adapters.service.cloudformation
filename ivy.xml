@@ -1,0 +1,24 @@
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+  <info organisation="com.servicemesh" module="${ant.project.name}" />
+  <publications>
+    <artifact name="${ant.project.name}-${bundle.version}.r${git.revision}.${git.commit}" type="jar" ext="jar" />
+  </publications>
+  <dependencies>
+
+    <!-- Third party dependencies -->
+    <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.7.0"/>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.7.0"/>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.7.0"/>
+    <dependency org="com.sun.xml.bind" name="jaxb-xjc" rev="2.2.11"/>
+    <dependency org="com.sun.xml.bind" name="jaxb-impl" rev="2.2.11"/>
+    <dependency org="com.sun.xml.bind" name="jaxb-core" rev="2.2.11"/>
+
+    <dependency org="log4j" name="log4j" rev="1.2.17">
+      <artifact name="log4j-1.2.17" type="jar" ext="jar" />
+    </dependency>
+    <dependency org="osgi" name="osgi" rev="3.8.0.v20120529-1548">
+      <artifact name="osgi-3.8.0.v20120529-1548" type="jar" ext="jar" />
+    </dependency>
+  </dependencies>
+</ivy-module>
+

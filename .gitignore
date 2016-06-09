@@ -1,0 +1,12 @@
+apidocs.log
+junit.properties
+/bin
+/coverage
+/dist
+/ivy-lib
+/rpm/BUILDROOT
+/rpm/RPMS
+/test/bin
+/test/reports
+/test/unit/bin
+/test/unit/reports

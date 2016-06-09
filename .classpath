@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test/unit/src"/>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=com.servicemesh.agility.adapters.core.aws&amp;ivyXmlPath=ivy.xml&amp;confs=*&amp;ivySettingsPath=ivysettings.xml&amp;loadSettingsOnDemand=false&amp;ivyUserDir=&amp;propertyFiles="/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="AWS-CORE"/>
+	<classpathentry kind="var" path="DIST/com.servicemesh.agility.api-3.1.0.jar"/>
+	<classpathentry kind="var" path="DIST/com.servicemesh.agility.sdk.service-1.0.0.jar"/>
+	<classpathentry kind="var" path="DIST/com.servicemesh.core-1.0.0.jar"/>
+	<classpathentry kind="var" path="DIST/com.servicemesh.io-1.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
