@@ -2,35 +2,17 @@
 <ivy-settings>
   <settings defaultResolver="ivy" />
   <resolvers>
-
-    <!-- chains -->
-    <filesystem name="local-cache">
-      <artifact pattern="${ivy.default.ivy.user.dir}/cache/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]" />
-      <ivy pattern="${ivy.default.ivy.user.dir}/cache/[organisation]/[module]/ivy-[revision].xml" />
-    </filesystem>
-
-    <filesystem name="local-servicemesh" latest="latest-time">
-      <artifact pattern="${ivy.default.ivy.user.dir}/local-servicemesh/[organization]/[module]/[revision]/[module]-[revision].[ext]" />
-      <ivy pattern="${ivy.default.ivy.user.dir}/local-servicemesh/[organization]/[module]/[revision]/ivy-[revision].xml" />
-    </filesystem>
-
-    <url name="repo-ivy-ext-release-local" m2compatible="true">
-      <artifact pattern="http://repo.servicemesh.com:8081/artifactory/ivy-ext-release-local/[organization]/[revision]/[artifact].[ext]" />
-      <ivy pattern="http://repo.servicemesh.com:8081/artifactory/ivy-ext-release-local/[organization]/[revision]/[module]-[revision].[ext]" />
-    </url>
-
     <url name="maven-central" m2compatible="true" >
         <artifact pattern="http://central.maven.org/maven2/[organization]/[module]/[revision]/[artifact]-[revision]([tag]).[ext]" />
         <ivy pattern="http://central.maven.org/maven2/[organization]/[module]/[revision]/[module]-[revision].[ext]" />
     </url>
-
-    <ibiblio name="maven-repository" root="http://mvnrepository.com/artifact/" m2compatible="true" />
-
+    <url name="csc-opensrc" m2compatible="true" >
+        <artifact pattern="https://dl.bintray.com/csc/opensource/[organization]/[module]/[revision]/[artifact]-[revision]([tag]).[ext]" />
+        <ivy pattern="https://dl.bintray.com/csc/opensource/[organization]/[module]/[revision]/[module]-[revision].[ext]" />
+    </url>
     <chain name="ivy" returnFirst="true">
-        <resolver ref="local-servicemesh" />
-        <resolver ref="repo-ivy-ext-release-local" />
         <resolver ref="maven-central" />
-        <resolver ref="maven-repository" />
+        <resolver ref="csc-opensrc" />
     </chain>
 
     <!-- Used for CI release builds -->

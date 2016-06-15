@@ -6,20 +6,6 @@
         Definitions
         ================================================================= -->
 
-   <property name="common.basedir" value="${basedir}/../agility-platform-sdk"/>
-   <property name="common.ivy.lib" value="${common.basedir}/ivy-lib"/>
-   <property name="common.dist" value="${common.basedir}/dist"/>
-   <property name="common.lib" value="${common.basedir}/lib"/>
-   <property name="common.io.lib"
-             value="${common.basedir}/com.servicemesh.io/lib"/>
-
-   <property name="aws.core.basedir" value="${basedir}/../com.servicemesh.agility.adapters.core.aws"/>
-   <property name="aws.core.dist" value="${aws.core.basedir}/bin"/>
-
-   <available file="${common.ivy.lib}" type="dir" property="common.present"/>
-   <fail unless="common.present"
-         message="This project requires a built ${common.basedir}"/>
-
    <property name="src" value="src"/>
    <property name="bin" value="bin"/>
    <property name="dist" value="dist"/>
@@ -63,19 +49,6 @@
 
    <!-- classpaths -->
    <path id="compile.classpath">
-      <fileset dir="${common.ivy.lib}">
-         <include name="log4j-*.jar"/>
-      </fileset>
-      <fileset dir="${common.dist}">
-         <include name="com.servicemesh.agility.api-*.jar" />
-         <include name="com.servicemesh.agility.sdk.service-*.jar" />
-         <include name="com.servicemesh.core-*.jar"/>
-         <include name="com.servicemesh.io-*.jar"/>
-         <include name="com.servicemesh.agility.distributed.sync-*.jar"/>
-      </fileset>
-      <fileset dir="${aws.core.dist}">
-         <include name="com.servicemesh.agility.adapters.core.aws-*.jar" />
-      </fileset>
       <fileset dir="${ivy.lib}">
          <include name="*.jar"/>
       </fileset>
@@ -84,7 +57,7 @@
   <path id="unit.test.compile.classpath">
     <path refid="compile.classpath"/>
     <pathelement location="${bin}"/>
-    <fileset dir="${common.ivy.lib}">
+    <fileset dir="${ivy.lib}">
        <include name="mockito-all-1.10.19.jar" />
        <include name="junit-4.11.jar" />
        <include name="commons-cli-1.2.jar" />
@@ -93,13 +66,13 @@
        <include name="spock-core-0.6-groovy-1.8.jar" />
        <include name="asm-3.2.jar" />
        <include name="cglib-nodep-2.2.2.jar" />
+       <include name="powermock-mockito-1.6.3-full.jar"/>
     </fileset>
-    <fileset dir="${common.lib}" includes="powermock-mockito-1.6.3-full.jar"/>
     <path refid="cobertura.classpath"/>
   </path>
 
   <path id="spock.classpath">
-     <fileset dir="${common.ivy.lib}">
+     <fileset dir="${ivy.lib}">
         <include name="cglib-nodep-2.2.2.jar" />
         <include name="slf4j-api-1.7.5.jar" />
         <include name="log4j-1.2.17.jar" />
@@ -120,10 +93,7 @@
   </path>
 
   <path id="cobertura.classpath">
-     <fileset dir="${common.lib}">
-        <include name="cobertura*.jar"/>
-     </fileset>
-     <fileset dir="${common.ivy.lib}">
+     <fileset dir="${ivy.lib}">
         <include name="asm-5*.jar"/>
         <include name="asm-analysis*.jar"/>
         <include name="asm-commons*.jar"/>
@@ -131,6 +101,7 @@
         <include name="asm-util*.jar"/>
         <include name="commons-lang3-*.jar"/>
         <include name="commons-logging-*.jar"/>
+        <include name="cobertura*.jar"/>
         <include name="log4j-*.jar"/>
         <include name="oro-*.jar"/>
         <include name="slf4j-api*.jar"/>
@@ -139,7 +110,7 @@
   </path>
 
   <path id="groovy.classpath">
-     <fileset dir="${common.ivy.lib}">
+     <fileset dir="${ivy.lib}">
         <include name="groovy-all-*.jar"/>
      </fileset>
   </path>

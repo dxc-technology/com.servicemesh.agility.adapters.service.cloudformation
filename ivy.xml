@@ -5,16 +5,62 @@
   </publications>
   <dependencies>
 
-    <!-- Third party dependencies -->
+    <!-- runtime dependencies -->
     <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.7.0"/>
     <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.7.0"/>
     <dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.7.0"/>
 
-    <dependency org="log4j" name="log4j" rev="1.2.17">
-      <artifact name="log4j-1.2.17" type="jar" ext="jar" />
+    <!-- agility dependencies -->
+    <dependency org="" name="com.servicemesh.agility.adapters.core.aws" rev="1.2.0.r36.2d2dd36"/>
+    <dependency org="com.servicemesh" name="agility.api" rev="3.1.0" />
+    <dependency org="com.servicemesh" name="agility.sdk.service" rev="1.1.0" />
+    <dependency org="com.servicemesh" name="core" rev="1.0.0"  force="true" />
+    <dependency org="com.servicemesh" name="io" rev="1.0.0"  force="true" />
+    <dependency org="com.servicemesh" name="agility.distributed.sync" rev="1.0.0" force="true" />
+
+    <!-- required build artifacts -->
+    <dependency org="commons-codec" name="commons-codec" rev="1.4">
+      <artifact name="commons-codec" type="jar" ext="jar" />
     </dependency>
-    <dependency org="osgi" name="osgi" rev="3.8.0.v20120529-1548">
-      <artifact name="osgi-3.8.0.v20120529-1548" type="jar" ext="jar" />
+    <dependency org="com.servicemesh.agility-platform-sdk" name="httpasyncclient" rev="4.1">
+      <artifact name="httpasyncclient" type="jar" ext="jar" />
+    </dependency>
+    <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.4.1" >
+      <exclude org="org.apache.httpcomponents" module="httpcore" name="*" type="*" ext="*"  matcher="exact"/>
+    </dependency>
+    <dependency org="com.servicemesh.agility-platform-sdk" name="httpcore" rev="4.4.1">
+      <artifact name="httpcore" type="jar" ext="jar" />
+    </dependency>
+    <dependency org="com.servicemesh.agility-platform-sdk" name="httpcore-nio" rev="4.4.1">
+      <artifact name="httpcore-nio" type="jar" ext="jar" />
+    </dependency>
+
+    <dependency org="log4j" name="log4j" rev="1.2.17" />
+    <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.5"/>
+    <dependency org="org.apache.felix" name="org.apache.felix.framework" rev="5.4.0"/>
+
+    <!-- unit test/cobertura -->
+    <dependency org="net.sourceforge.cobertura" name="cobertura" rev="2.1.1"/>
+    <dependency org="org.ow2.asm" name="asm" rev="5.0.1"/>
+    <dependency org="asm" name="asm" rev="3.2"/>
+    <dependency org="org.ow2.asm" name="asm-commons" rev="5.0.1"/>
+    <dependency org="org.ow2.asm" name="asm-tree" rev="5.0.1"/>
+    <dependency org="org.ow2.asm" name="asm-util" rev="5.0.1"/>
+    <dependency org="org.ow2.asm" name="asm-analysis" rev="5.0.1"/>
+    <dependency org="org.apache.commons" name="commons-lang3" rev="3.3.2"/>
+    <dependency org="commons-logging" name="commons-logging" rev="1.1.1"/>
+    <dependency org="oro" name="oro" rev="2.0.8"/>
+    <dependency org="org.slf4j" name="slf4j-api" rev="1.7.5"/>
+    <dependency org="com.google.guava" name="guava" rev="16.0.1"/>
+    <dependency org="org.codehaus.groovy" name="groovy" rev="1.8.9" />
+    <dependency org="org.codehaus.groovy" name="groovy-all" rev="1.8.9" />
+    <dependency org="org.spockframework" name="spock-core" rev="0.6-groovy-1.8"/>
+    <dependency org="cglib" name="cglib-nodep" rev="2.2.2"/>
+    <dependency org="org.javassist" name="javassist" rev="3.18.2-GA"/>
+    <dependency org="junit" name="junit" rev="4.12"/>
+    <dependency org="org.mockito" name="mockito-all" rev="1.10.19"/>
+    <dependency org="org.powermock" name="powermock-mockito-release-full" rev="1.6.4">
+        <artifact name="powermock-mockito-release-full" type="jar" ext="jar" e:tag="-full"/>
     </dependency>
   </dependencies>
 </ivy-module>
