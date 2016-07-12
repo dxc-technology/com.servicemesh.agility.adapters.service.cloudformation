@@ -1,6 +1,6 @@
 # com.servicemesh.agility.adapters.service.cloudformation
 
-AWS CloudFormation Service Adapter
+CSC Agility Platform - Service Adaptor for AWS CloudFormation
 
 This adapter enables access to any AWS service or set of services/infrastructure that can be expressed as a cloud formation template. The cloud formation template is wrapped by the adapter and exposed as an agility blueprint service with inputs/outputs defined by the template. This allows the service to be integrated into more complex blueprints and policy/governance controls placed around their provisioning.
 
