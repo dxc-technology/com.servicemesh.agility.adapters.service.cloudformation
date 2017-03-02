@@ -12,11 +12,11 @@
 
     <!-- agility dependencies -->
     <dependency org="" name="com.servicemesh.agility.adapters.core.aws" rev="1.2.0.r36.2d2dd36"/>
-    <dependency org="com.servicemesh" name="agility.api" rev="3.1.0" />
-    <dependency org="com.servicemesh" name="agility.sdk.service" rev="1.1.0" />
-    <dependency org="com.servicemesh" name="core" rev="1.0.0"  force="true" />
-    <dependency org="com.servicemesh" name="io" rev="1.0.0"  force="true" />
-    <dependency org="com.servicemesh" name="agility.distributed.sync" rev="1.0.0" force="true" />
+    <dependency org="com.servicemesh" name="agility.api" rev="10.2.4.+" />
+    <dependency org="com.servicemesh" name="agility.service.sdk" rev="10.2.4.+" />
+    <dependency org="com.servicemesh" name="agility.core" rev="10.2.4.+"  force="true" />
+    <dependency org="com.servicemesh" name="agility.io" rev="10.2.4.+"  force="true" />
+    <dependency org="com.servicemesh" name="agility.distributed.sync" rev="10.2.4.+" force="true" />
 
     <!-- required build artifacts -->
     <dependency org="commons-codec" name="commons-codec" rev="1.4">

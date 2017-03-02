@@ -115,7 +115,7 @@
      </fileset>
   </path>
 
-   <target name="groovyc" >
+   <target name="groovyc" unless="skipTests">
       <taskdef name="groovyc" classname="org.codehaus.groovy.ant.Groovyc" classpathref="spock.classpath" />
    </target>
 
@@ -129,7 +129,7 @@
       <mkdir dir="${unit.test.reports}"/>
       <mkdir dir="${ivy.lib}"/>
 
-      <ivy:retrieve pattern="${ivy.lib}/[module]-[revision].[ext]"/>
+      <ivy:retrieve pattern="${ivy.lib}/[module]-[revision]-[type].[ext]"/>
    </target>
 
    <target name="compile" depends="init"
